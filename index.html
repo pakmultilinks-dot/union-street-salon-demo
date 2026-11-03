@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Union Street Salon, Nashville | KezTech Demo Concept</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;color:#2b2326;background:#faf7f5}
+.banner{background:#5b2a3a;color:#fff;text-align:center;padding:12px 16px;font-family:Arial,sans-serif;font-size:14px}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 48px}
+.hero{background:#f3e8ec;border-radius:16px;padding:36px 28px}.hero h1{font-size:38px;margin:8px 0}.hero p{font-size:18px;line-height:1.6;color:#4d4246}
+.kicker{font-family:Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#5b2a3a;font-size:13px;font-weight:700}
+.btn{display:inline-block;background:#5b2a3a;color:#fff;padding:13px 22px;border-radius:999px;text-decoration:none;font-family:Arial,sans-serif;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}.card{background:#fff;border:1px solid #e6dcd9;border-radius:14px;padding:22px}
+.card h2{margin-top:0}.card p,.card li{line-height:1.6}
+section{margin:28px 0}h2{font-size:26px}
+form{background:#fff;border:1px solid #e6dcd9;border-radius:14px;padding:26px}label{display:block;font-family:Arial,sans-serif;font-weight:700;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d8cbc7;border-radius:8px;font-size:16px}
+button{background:#5b2a3a;color:#fff;border:0;padding:13px 22px;border-radius:999px;font-size:16px;font-weight:700;cursor:pointer}
+.confirm{display:none;background:#f3e8ec;border:1px solid #5b2a3a;border-radius:12px;padding:20px;margin-top:18px}
+.note{font-size:13px;color:#6b5f63;font-family:Arial,sans-serif}
+.price{font-family:Arial,sans-serif;font-weight:700;color:#5b2a3a}
+footer{text-align:center;color:#6b5f63;font-family:Arial,sans-serif;font-size:13px;padding:20px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.hero h1{font-size:30px}}
+</style></head><body>
+<div class="banner">KezTech Solution demo concept for Union Street Salon, Nashville. This is not the official site.</div>
+<div class="wrap">
+<div class="hero"><div class="kicker">Downtown Nashville, Tennessee | Hair and Spa</div>
+<h1>Pick your service, see the price step clearly, then book.</h1>
+<p>Union Street Salon offers hair and spa services in downtown Nashville. This demo fixes the price clarity gap: every service is listed with a clear next step, and the price step is shown honestly as price on enquiry, with no invented prices.</p>
+<a class="btn" href="#book">Book an appointment</a>
+<p class="note">329 Union St, Nashville, TN 37201. This demo shows a concept only.</p></div>
+
+<section><h2>Before vs this demo</h2><div class="grid">
+<div class="card"><h2>Before</h2><p>On the page checked, the homepage lists services with no prices on that page, and booking links out to an external booking system. A visitor cannot see the price step on the same page.</p></div>
+<div class="card"><h2>This demo</h2><p>Services and booking sit on one page. Each service shows a clear price step, and the booking form lets you pick the service first, so the salon can confirm the price in writing before the visit.</p></div>
+</div></section>
+
+<section><h2>Services</h2><div class="grid">
+<div class="card"><h2>Hair services</h2><p>Hair care and styling, selected in the booking form below.</p><p class="price">Price on enquiry</p></div>
+<div class="card"><h2>Spa services</h2><p>Spa treatments, selected in the booking form below.</p><p class="price">Price on enquiry</p></div>
+<div class="card"><h2>Consultation</h2><p>A short consultation before you choose a service or treatment.</p><p class="price">Price on enquiry</p></div>
+<div class="card"><h2>How pricing works here</h2><p>No prices are invented in this demo. The salon confirms the price in writing after you pick a service, so there are no surprises at the visit.</p></div>
+</div></section>
+
+<section id="book"><h2>Book an appointment</h2>
+<form id="f"><p class="note">Front-end demo only. Nothing is sent to a server yet. On a live site, this booking request would go straight to the salon, with the price confirmed in writing.</p>
+<label>Full name *</label><input required placeholder="Your full name">
+<label>Phone *</label><input required type="tel" placeholder="Your phone number">
+<label>Email</label><input type="email" placeholder="Your email address">
+<label>Service *</label><select required id="svc"><option value="">Select a service</option><option>Hair services</option><option>Spa services</option><option>Consultation</option></select>
+<p class="note">Selected service price step: <span class="price">Price on enquiry</span>. The salon will confirm the price in writing.</p>
+<label>Preferred day</label><input type="date">
+<label>Preferred time</label><select><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
+<label>Your message</label><textarea rows="4" placeholder="Anything the salon should know, for example hair type, occasion, or timing?"></textarea>
+<p><button type="submit">Send booking request</button></p>
+<div class="confirm" id="c"><h2>Booking request received</h2><p>Thank you. Your request has been recorded in this demo.</p><p>Reference: <strong id="ref"></strong></p><p>Service: <strong id="svcOut"></strong> | Price step: <strong>Price on enquiry</strong></p><p class="note">This is a front-end demo confirmation only. No real booking has been sent yet.</p></div>
+</form></section>
+
+<section><h2>Common questions</h2><div class="card">
+<p><strong>Why does it say price on enquiry instead of a price?</strong><br>Because no prices were invented for this demo. The salon confirms the price in writing after you pick a service.</p>
+<p><strong>Do I have to leave this page to book?</strong><br>No, not in this demo. Service selection and booking sit on the same page.</p>
+<p><strong>Is this Union Street Salon's official website?</strong><br>No. This is a demo concept built by KezTech Solution to show how clearer service and price steps could work. It is not the official site for Union Street Salon.</p>
+</div></section>
+</div><footer>KezTech Solution demo concept. Not the official site for Union Street Salon.</footer>
+<script>document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ref').textContent='US-'+Math.random().toString(36).slice(2,8).toUpperCase();document.getElementById('svcOut').textContent=document.getElementById('svc').value||'Not selected';document.getElementById('c').style.display='block';document.getElementById('c').scrollIntoView({behavior:'smooth'});});</script>
+</body></html>
